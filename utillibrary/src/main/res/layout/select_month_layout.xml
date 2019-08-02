@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="344dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/confirm_dialog_layout_bg"
+    android:padding="@dimen/dp_8"
+    android:layout_height="254dp">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="月份选择"
+        android:textSize="@dimen/fourth_text_size"
+        android:textColor="@color/first_text_color"
+        android:layout_centerHorizontal="true"/>
+
+    <com.zc.customview.TextViewIcon
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="&#xe611;"
+        android:textColor="@color/text_color_gray"
+        android:textSize="16dp"
+        android:id="@+id/id_select_month_delete_icon"
+        android:layout_alignParentEnd="true"/>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="160dp"
+        android:layout_centerInParent="true"
+        android:orientation="horizontal">
+        <com.weigan.loopview.LoopView
+            android:id="@+id/id_select_month_year_loop_view"
+            android:layout_width="110dp"
+            android:layout_height="match_parent"
+            />
+        <com.weigan.loopview.LoopView
+            android:id="@+id/id_select_month_loop_view"
+            android:layout_width="110dp"
+            android:layout_marginStart="34dp"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+    <TextView
+        android:id="@+id/id_select_month_confirm_tv"
+        android:layout_width="@dimen/dp_80"
+        android:layout_height="24dp"
+        android:gravity="center"
+        android:background="@drawable/normal_btn_bg"
+        android:text="确定"
+        android:textColor="@color/white"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"/>
+</RelativeLayout>

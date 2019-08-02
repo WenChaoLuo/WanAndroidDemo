@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="290dp"
+    android:background="@drawable/confirm_dialog_layout_bg"
+    android:elevation="@dimen/dp_2"
+    android:layout_height="160dp">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/id_fingerprint_title_tv"
+        android:layout_centerHorizontal="true"
+        android:textSize="@dimen/fourth_text_size"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"
+        android:text="@string/string_check_fingerprint"
+        android:textColor="@color/first_text_color"/>
+    <ImageView
+        android:layout_width="@dimen/dp_40"
+        android:layout_height="@dimen/dp_40"
+        android:id="@+id/id_fingerprint_img"
+        android:src="@drawable/ic_fingerprint"
+        android:layout_centerInParent="true"
+        />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:id="@+id/id_confirm_cancel_layout"
+        android:layout_height="44dp"
+        android:layout_alignParentBottom="true"
+        >
+        <ImageView
+            android:layout_width="match_parent"
+            android:background="@color/line_color"
+            android:layout_height="1px" />
+        <TextView
+            android:id="@+id/id_confirm_cancel_tv"
+            android:layout_marginTop="2px"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textColor="@color/text_color_gray"
+            android:gravity="center"
+            android:background="@drawable/dialog_btn_normal_bg"
+            android:layout_centerInParent="true"
+            android:textSize="@dimen/fourth_text_size"
+            android:text="@string/string_cancel"/>
+    </RelativeLayout>
+</RelativeLayout>

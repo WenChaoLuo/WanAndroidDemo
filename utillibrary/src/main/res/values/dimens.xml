@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="item_height">55dp</dimen>
+    <dimen name="item_height_large">62dp</dimen>
+    <dimen name="item_height_mini">44dp</dimen>
+    <dimen name="item_height_more_mini">36dp</dimen>
+    <dimen name="dp_150">150dp</dimen>
+    <dimen name="dp_140">140dp</dimen>
+    <dimen name="dp_100">100dp</dimen>
+    <dimen name="dp_120">120dp</dimen>
+    <dimen name="dp_80">80dp</dimen>
+    <dimen name="dp_40">40dp</dimen>
+    <dimen name="dp_20">20dp</dimen>
+    <dimen name="dp_30">30dp</dimen>
+    <dimen name="dp_50">50dp</dimen>
+    <dimen name="dp_60">60dp</dimen>
+    <dimen name="dp_8">8dp</dimen>
+    <dimen name="dp_6">6dp</dimen>
+    <dimen name="dp_1">1dp</dimen>
+    <dimen name="dp_2">2dp</dimen>
+    <dimen name="dp_15">15dp</dimen>
+    <dimen name="line_height">2px</dimen>
+    <dimen name="line_height_mini">1px</dimen>
+    <dimen name="btn_radius">15dp</dimen>
+    <!--控制字体大小-->
+    <dimen name="home_title_text_size">26sp</dimen>
+    <dimen name="big_text_size">24sp</dimen>
+    <dimen name="first_text_size">22sp</dimen>
+    <dimen name="second_text_size">20sp</dimen>
+    <dimen name="third_text_size">18sp</dimen>
+    <dimen name="fourth_text_size">16sp</dimen>
+    <dimen name="fifth_text_size">14sp</dimen>
+    <dimen name="sixth_text_size">12sp</dimen>
+    <dimen name="mini_text_size">10sp</dimen>
+
+    <dimen name="top_back_img_left_space">15dp</dimen>
+
+    <dimen name="loading_progress_text_size">40sp</dimen>
+</resources>

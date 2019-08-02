@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">UtilLibrary</string>
+    <string name="string_confirm">确认</string>
+    <string name="string_cancel">取消</string>
+    <string name="string_log_out">退出登录</string>
+    <string name="string_ask_log_out">您确定要退出当前账号吗？</string>
+    <string name="string_forget_password">忘记密码</string>
+    <string name="string_forget_password_info">可通过您的绑定手机号或绑定邮箱 进行密码找回！</string>
+    <string name="string_by_phone_number">通过手机号</string>
+    <string name="string_by_email">通过邮箱</string>
+    <string name="string_return_login">返回登录</string>
+    <string name="string_check_fingerprint">请验证您的指纹</string>
+</resources>

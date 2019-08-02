@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="whiteTextColor">#ffffff</color>
+    <color name="blackTextColor">#333333</color>
+    <color name="defaultBgColor">#f7f7f7</color>
+
+
+    <color name="defaultBgColorTwo">#dbdfe1</color>
+
+    <color name="text_color_green">#31aebc</color>
+    <color name="chart_line_color">#575757</color>
+    <color name="first_text_color">#333333</color>
+    <color name="second_text_color">#696969</color>
+    <color name="third_text_color">#969696</color>
+    <color name="fourth_text_color">#bababa</color>
+    <color name="fifth_text_color">#e4e4e4</color>
+    <color name="sixth_text_color">#efefef</color>
+    <color name="seventh_text_color">#f2f2f2</color>
+    <color name="text_color_gray">#999999</color>
+    <color name="text_color_gray_two">#646464</color>
+    
+    <color name="text_color_orange">#ff8400</color>
+    <color name="home_lv_item_complete_string_color">#34cdbd</color>
+    <color name="home_lv_item_delay_string_color">#ff5353</color>
+
+    <color name="home_pending_title_color">#ffb351</color>
+    <color name="home_complete_title_color">#34cdbd</color>
+    <color name="home_delay_title_color">#ff5353</color>
+
+    <color name="red_text_color">#ef4747</color>
+
+    <color name="line_color">#cfcfcf</color>
+    <color name="line_color_two">#e6e6e6</color>
+
+    <color name="time_pick_title_color">#31aebc</color>
+    <color name="white">#ffffff</color>
+    <color name="green">#33de30</color>
+    <color name="black">#000000</color>
+    <color name="red">#ff0000</color>
+    <color name="login_out_color">#CF0C24</color>
+    <color name="text_color_blue">#32A9E7</color>
+</resources>
