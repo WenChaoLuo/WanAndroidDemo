@@ -16,9 +16,8 @@ import com.chad.library.adapter.base.BaseQuickAdapter
 import com.zc.demo.adapter.TestAdapter
 import com.zc.demo.connect.ConnectCallback
 import com.zc.demo.connect.ConnectControl
-import com.zc.demo.model.HomeArticleModel
-import com.zc.demo.model.HomeBannerModel
 import com.zc.demo.model.Ret
+import com.zc.demo.view.activity.main.model.MainModel
 import com.zc.utillibrary.DialogUtil
 import com.zc.utillibrary.RxToast
 import kotlinx.android.synthetic.main.activity_main.*
@@ -31,17 +30,17 @@ import kotlinx.android.synthetic.main.activity_main.*
  */
 class MainActivity : AppCompatActivity(), BaseQuickAdapter.OnItemChildClickListener {
     lateinit var adapter: TestAdapter
-    var data: List<HomeArticleModel.DatasBean>? = null
+    var data: List<MainModel.DataModel.DatasBean>? = null
     var showView: Boolean = false
     var hideView: Boolean = false
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        ConnectControl.getHomeBanner(object : ConnectCallback<List<HomeBannerModel>>() {
+        ConnectControl.getHomeBanner(object : ConnectCallback<List<MainModel.BannerModel>>() {
             override fun noNetwork() {
             }
 
-            override fun success(data: List<HomeBannerModel>) {
+            override fun success(data: List<MainModel.BannerModel>) {
                 Log.e("main", "title=" + data[0].title)
             }
 
@@ -51,11 +50,11 @@ class MainActivity : AppCompatActivity(), BaseQuickAdapter.OnItemChildClickListe
             }
 
         })
-        ConnectControl.getHomeArticle("1", object : ConnectCallback<HomeArticleModel>() {
+        ConnectControl.getHomeArticle("1", object : ConnectCallback<MainModel.DataModel>() {
             override fun noNetwork() {
             }
 
-            override fun success(data: HomeArticleModel) {
+            override fun success(data: MainModel.DataModel) {
                 Log.e("main", "title=" + data.datas!![0].title)
                 initData(data.datas!!)
             }
@@ -66,8 +65,8 @@ class MainActivity : AppCompatActivity(), BaseQuickAdapter.OnItemChildClickListe
         })
     }
 
-    private fun initData(datas: List<HomeArticleModel.DatasBean>) {
-        var d:MutableList<HomeArticleModel.DatasBean> = mutableListOf()
+    private fun initData(datas: List<MainModel.DataModel.DatasBean>) {
+        var d:MutableList<MainModel.DataModel.DatasBean> = mutableListOf()
         for(i in 0..6){
             d.add(datas[i])
         }

@@ -4,8 +4,8 @@ import com.ihsanbal.logging.Level
 import com.ihsanbal.logging.LoggingInterceptor
 import com.zc.demo.BuildConfig
 import com.zc.demo.content.ServerUrl
-import com.zc.demo.model.HomeArticleModel
-import com.zc.demo.model.HomeBannerModel
+import com.zc.demo.view.activity.main.model.MainModel
+import com.zc.demo.view.activity.main.model.ProjectModel
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
 import okhttp3.OkHttpClient
@@ -69,7 +69,7 @@ class ConnectControl{
         /**
          * 获取首页banner
          */
-        fun getHomeBanner(callback: ConnectCallback<List<HomeBannerModel>>){
+        fun getHomeBanner(callback: ConnectCallback<List<MainModel.BannerModel>>){
             init()
             service.getHomeBanner().subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread()).subscribe(BaseObserver(callback))
         }
@@ -77,9 +77,13 @@ class ConnectControl{
         /**
          * 获取首页文章
          */
-        fun getHomeArticle(path:String,callback: ConnectCallback<HomeArticleModel>){
+        fun getHomeArticle(path:String,callback: ConnectCallback<MainModel.DataModel>){
             init()
             service.getHomeArticle(path).subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread()).subscribe(BaseObserver(callback))
+        }
+        fun getProjects(path:String,callback: ConnectCallback<ProjectModel.DataModel>){
+            init()
+            service.getProjects(path,"294").subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread()).subscribe(BaseObserver(callback))
         }
     }
 

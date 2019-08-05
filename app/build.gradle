@@ -58,13 +58,7 @@ dependencies {
     implementation 'com.diogobernardino:williamchart:2.5.0'
     implementation 'org.xclcharts:lib:2.4'
     implementation 'com.github.lecho:hellocharts-android:v1.5.8'
-    implementation files('libs/analysys_core_4.3.5_20190703.jar')
-    implementation files('libs/analysys_encrypt_4.3.5_20190703.jar')
-    implementation files('libs/analysys_push_4.3.5_20190703.jar')
-    implementation files('libs/analysys_visual_4.3.5_20190703.jar')
 
-    //mvp core
-    implementation 'com.github.cn-ljb:kotlin-mvp-lib:1.2.0'
 
 //网络库lib、数据库lib 根据项目实际情况引入
 //net lib
@@ -72,4 +66,21 @@ dependencies {
 //dao lib
     implementation 'com.github.cn-ljb:daolib:1.0.1'
     implementation project(path: ':utillibrary')
+
+    implementation 'com.github.Ye-Miao:StatusBarUtil:1.7.5'
+    implementation project(path: ':mvplib')
+    //banner广告栏
+    implementation 'com.youth.banner:banner:1.4.10'
+
+    implementation  'cn.yc:YCStateLib:1.1.9'
+    configurations.all {
+        resolutionStrategy.eachDependency { DependencyResolveDetails details ->
+            def requested = details.requested
+            if (requested.group == 'com.android.support') {
+                if (!requested.name.startsWith("multidex")) {
+                    details.useVersion '27.+'
+                }
+            }
+        }
+    }
 }

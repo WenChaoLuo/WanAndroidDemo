@@ -16,25 +16,19 @@
         android:theme="@style/AppTheme">
         <activity android:name=".Main4Activity"></activity>
         <activity android:name=".MainActivity">
+
+        </activity>
+        <activity android:name=".Main2Activity" />
+        <activity android:name=".Main3Activity" />
+        <activity android:name="com.zc.demo.view.activity.login.view.act.LoginActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Main2Activity" />
-        <activity android:name=".Main3Activity" />
-        <activity android:name=".test.view.act.TestActivity" />
+        <activity android:name="com.zc.demo.view.activity.main.view.act.MainActivity" />
 
-        <meta-data
-            android:name="ANALYSYS_APPKEY"
-            android:value="fd9b064d29527217" />
-        <meta-data
-            android:name="ANALYSYS_CHANNEL"
-            android:value="WanDouJia" />
-        <meta-data
-            android:name="ANALYSYS_KEYSTONE"
-            android:value="analysys.crt"/>
     </application>
 
 </manifest>
