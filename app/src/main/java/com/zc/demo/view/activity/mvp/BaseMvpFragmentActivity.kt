@@ -3,32 +3,28 @@ package com.zc.demo.view.activity.mvp
 import android.content.Intent
 import android.content.res.Configuration
 import android.content.res.Resources
-import android.graphics.Color
 import android.os.Bundle
 import android.support.v4.content.ContextCompat
 import android.widget.Toast
 import com.leaf.library.StatusBarUtil
 import com.zc.demo.R
 import mvp.ljb.kt.contract.IPresenterContract
-import mvp.ljb.kt.view.MvpActivity
+import mvp.ljb.kt.view.MvpFragmentActivity
+
 /**
  * Author:Ljb
  * Time:2019/7/4
  * There is a lot of misery in life
  **/
-abstract class BaseMvpActivity<out P : IPresenterContract> : MvpActivity<P>() {
+abstract class BaseMvpFragmentActivity<out P : IPresenterContract> : MvpFragmentActivity<P>() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(getLayoutId())
         init(savedInstanceState)
         initView()
         initData()
-        StatusBarUtil.setColor(this,ContextCompat.getColor(this, R.color.title_bar_color))
+        StatusBarUtil.setColor(this, ContextCompat.getColor(this, R.color.title_bar_color))
         StatusBarUtil.setLightMode(this)
-//        StatusBarUtil.setTransparentForWindow(this)
-    }
-    open fun initStatusLayout(){
-
     }
 
     protected abstract fun getLayoutId(): Int

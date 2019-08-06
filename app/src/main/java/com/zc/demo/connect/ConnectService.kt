@@ -6,6 +6,7 @@ import com.zc.demo.view.activity.main.model.ProjectModel
 import io.reactivex.Observable
 import retrofit2.http.GET
 import retrofit2.http.Path
+import retrofit2.http.Query
 
 interface ConnectService{
     /**
@@ -21,6 +22,6 @@ interface ConnectService{
     @GET("article/list/{page}/json")
     fun getHomeArticle(@Path("page") page: String):Observable<BaseResponse<MainModel.DataModel>>
 
-    @GET("project/list/{page}/json?cid={id}")
-    fun getProjects(@Path("page") page: String,@Path("id") cid: String):Observable<BaseResponse<ProjectModel.DataModel>>
+    @GET("project/list/{page}/json")
+    fun getProjects(@Path("page") page: String,@Query("cid") cid: String):Observable<BaseResponse<ProjectModel.DataModel>>
 }

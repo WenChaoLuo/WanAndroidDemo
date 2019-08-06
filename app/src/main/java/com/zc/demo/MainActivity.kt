@@ -13,7 +13,7 @@ import android.view.View
 import com.blankj.utilcode.util.ConvertUtils
 import com.blankj.utilcode.util.ToastUtils
 import com.chad.library.adapter.base.BaseQuickAdapter
-import com.zc.demo.adapter.TestAdapter
+import com.zc.demo.adapter.HomeArticleRvAdapter
 import com.zc.demo.connect.ConnectCallback
 import com.zc.demo.connect.ConnectControl
 import com.zc.demo.model.Ret
@@ -29,7 +29,7 @@ import kotlinx.android.synthetic.main.activity_main.*
  * @className:
  */
 class MainActivity : AppCompatActivity(), BaseQuickAdapter.OnItemChildClickListener {
-    lateinit var adapter: TestAdapter
+    lateinit var adapter: HomeArticleRvAdapter
     var data: List<MainModel.DataModel.DatasBean>? = null
     var showView: Boolean = false
     var hideView: Boolean = false
@@ -71,7 +71,7 @@ class MainActivity : AppCompatActivity(), BaseQuickAdapter.OnItemChildClickListe
             d.add(datas[i])
         }
         this.data  = datas
-        adapter = TestAdapter(R.layout.rv_item, datas)
+        adapter = HomeArticleRvAdapter(R.layout.rv_item, datas)
         val managet: LinearLayoutManager = MyManager(this)
         managet.orientation = LinearLayoutManager.VERTICAL
         rv.adapter = adapter

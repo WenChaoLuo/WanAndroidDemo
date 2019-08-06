@@ -21,7 +21,7 @@
     <dimen name="dp_15">15dp</dimen>
     <dimen name="line_height">2px</dimen>
     <dimen name="line_height_mini">1px</dimen>
-    <dimen name="btn_radius">15dp</dimen>
+    <dimen name="btn_radius">20dp</dimen>
     <!--控制字体大小-->
     <dimen name="home_title_text_size">26sp</dimen>
     <dimen name="big_text_size">24sp</dimen>

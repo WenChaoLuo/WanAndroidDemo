@@ -5,6 +5,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/defaultBgColor"
     android:orientation="vertical">
+    <include layout="@layout/top_title_layout"/>
    <android.support.v4.view.ViewPager
        android:id="@+id/viewPager"
        android:layout_width="match_parent"
@@ -15,7 +16,7 @@
         android:elevation="@dimen/dp_2"
         android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/dp_80">
+        android:layout_height="@dimen/dp_60">
         <android.support.constraint.ConstraintLayout
             android:id="@+id/homeLayout"
             android:layout_width="0dp"
@@ -24,13 +25,13 @@
             android:layout_weight="1">
             <ImageView
                 android:id="@+id/home_img"
-                android:layout_width="35dp"
-                android:layout_height="35dp"
+                android:layout_width="@dimen/home_item_img_size"
+                android:layout_height="@dimen/home_item_img_size"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toTopOf="@id/home_tv"
                 app:layout_constraintRight_toRightOf="parent"
-                android:src="@mipmap/ic_launcher"/>
+                android:src="@drawable/ic_wa_home"/>
             <TextView
                 android:id="@+id/home_tv"
                 android:text="@string/string_home"
@@ -50,13 +51,13 @@
             android:layout_weight="1">
             <ImageView
                 android:id="@+id/project_img"
-                android:layout_width="35dp"
-                android:layout_height="35dp"
+                android:layout_width="@dimen/home_item_img_size"
+                android:layout_height="@dimen/home_item_img_size"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toTopOf="@id/project_tv"
                 app:layout_constraintRight_toRightOf="parent"
-                android:src="@mipmap/ic_launcher"/>
+                android:src="@drawable/ic_wa_project"/>
             <TextView
                 android:id="@+id/project_tv"
                 android:text="@string/string_project"
@@ -76,13 +77,13 @@
             android:layout_weight="1">
             <ImageView
                 android:id="@+id/system_img"
-                android:layout_width="35dp"
-                android:layout_height="35dp"
+                android:layout_width="@dimen/home_item_img_size"
+                android:layout_height="@dimen/home_item_img_size"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toTopOf="@id/system_tv"
                 app:layout_constraintRight_toRightOf="parent"
-                android:src="@mipmap/ic_launcher"/>
+                android:src="@drawable/ic_wa_system"/>
             <TextView
                 android:id="@+id/system_tv"
                 android:text="@string/string_system"
@@ -102,13 +103,13 @@
             android:layout_weight="1">
             <ImageView
                 android:id="@+id/mine_img"
-                android:layout_width="35dp"
-                android:layout_height="35dp"
+                android:layout_width="@dimen/home_item_img_size"
+                android:layout_height="@dimen/home_item_img_size"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toTopOf="@id/mine_tv"
                 app:layout_constraintRight_toRightOf="parent"
-                android:src="@mipmap/ic_launcher"/>
+                android:src="@drawable/ic_wa_mine"/>
             <TextView
                 android:id="@+id/mine_tv"
                 android:text="@string/mine"

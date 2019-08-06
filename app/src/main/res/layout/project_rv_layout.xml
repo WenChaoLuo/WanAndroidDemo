@@ -3,19 +3,22 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@drawable/rectangle_radius_bg"
     android:padding="@dimen/dp_6"
+    android:elevation="@dimen/dp_2"
+    android:layout_margin="@dimen/dp_2"
     android:id="@+id/project_item_layout"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:src="@mipmap/loading_3"
         app:layout_constraintTop_toTopOf="parent"
         android:id="@+id/project_item_img"
         />
     <TextView
         android:id="@+id/project_item_title"
         android:layout_marginTop="@dimen/dp_8"
-        android:textSize="@dimen/font_size"
+        android:textSize="@dimen/fifth_text_size"
         android:textColor="@color/first_text_color"
         app:layout_constraintTop_toBottomOf="@id/project_item_img"
         android:layout_width="match_parent"

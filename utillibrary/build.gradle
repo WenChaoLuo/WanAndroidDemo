@@ -26,6 +26,7 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation 'com.android.support:appcompat-v7:27.1.1'
+    api 'com.android.support:recyclerview-v7:27.1.1'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
@@ -33,6 +34,9 @@ dependencies {
     api 'com.blankj:utilcode:1.23.6'
     //捕捉crash依赖
     api 'com.wanjian:cockroach:0.0.5'
+    //上拉加载和下拉刷新框架
+    api 'com.scwang.smartrefresh:SmartRefreshLayout:1.0.5.1'
+    api 'com.scwang.smartrefresh:SmartRefreshHeader:1.0.5.1'
     //wheelView时间选择依赖
     implementation 'com.weigan:loopView:0.1.2'
     implementation 'com.android.support.constraint:constraint-layout:1.1.3'
