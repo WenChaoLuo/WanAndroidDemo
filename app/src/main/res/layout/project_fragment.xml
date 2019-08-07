@@ -1,10 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/defaultBgColor"
+    android:orientation="vertical"
     android:layout_height="match_parent">
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tabLayout"
+        app:tabTextColor="#F8F7F7"
+        app:tabBackground="@color/title_bar_color"
+        app:tabGravity="center"
+        app:tabIndicatorColor="@color/white"
+        app:tabMode="scrollable"
+        app:tabSelectedTextColor="@color/white"
+        app:tabPaddingBottom="@dimen/dp_2"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"/>
     <android.support.v7.widget.RecyclerView
         android:id="@+id/recyclerView"
+        android:layout_marginTop="@dimen/dp_4"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
-</android.support.constraint.ConstraintLayout>
+</LinearLayout>

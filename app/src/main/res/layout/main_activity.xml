@@ -35,7 +35,7 @@
             <TextView
                 android:id="@+id/home_tv"
                 android:text="@string/string_home"
-                android:textSize="@dimen/sixth_text_size"
+                android:textSize="@dimen/mini_text_size"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:layout_constraintLeft_toLeftOf="parent"
@@ -61,7 +61,7 @@
             <TextView
                 android:id="@+id/project_tv"
                 android:text="@string/string_project"
-                android:textSize="@dimen/sixth_text_size"
+                android:textSize="@dimen/mini_text_size"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:layout_constraintLeft_toLeftOf="parent"
@@ -87,7 +87,7 @@
             <TextView
                 android:id="@+id/system_tv"
                 android:text="@string/string_system"
-                android:textSize="@dimen/sixth_text_size"
+                android:textSize="@dimen/mini_text_size"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:layout_constraintLeft_toLeftOf="parent"
@@ -113,7 +113,7 @@
             <TextView
                 android:id="@+id/mine_tv"
                 android:text="@string/mine"
-                android:textSize="@dimen/sixth_text_size"
+                android:textSize="@dimen/mini_text_size"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:layout_constraintLeft_toLeftOf="parent"

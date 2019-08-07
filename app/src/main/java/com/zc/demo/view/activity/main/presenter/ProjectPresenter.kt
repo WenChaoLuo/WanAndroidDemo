@@ -13,8 +13,12 @@ import com.zc.utillibrary.LogUtil
  * @Description input description
  **/
 class ProjectPresenter : BaseMvpPresenter<ProjectContract.IView, ProjectContract.IModel>(), ProjectContract.IPresenter{
+
     override fun loadData() {
-        ConnectControl.getProjects("1",object :ConnectCallback<ProjectModel.DataModel>(){
+
+    }
+    override fun getProjects(cid:String){
+        ConnectControl.getProjects("1",cid,object :ConnectCallback<ProjectModel.DataModel>(){
             override fun success(data: ProjectModel.DataModel) {
                 getMvpView().refreshProjects(data.datas!!)
             }
@@ -28,10 +32,24 @@ class ProjectPresenter : BaseMvpPresenter<ProjectContract.IView, ProjectContract
             }
         })
     }
-
     override fun onCreate() {
         super.onCreate()
-        loadData()
+        getProjectTree()
+        getProjects("294")
+    }
+    override fun getProjectTree(){
+        ConnectControl.getProjectTree(object :ConnectCallback<List<ProjectModel.TreeModel>>(){
+            override fun success(data: List<ProjectModel.TreeModel>) {
+                getMvpView().refreshProjectTree(data)
+            }
+
+            override fun error(msg: String) {
+                getMvpView().showError(2)
+            }
+
+            override fun noNetwork() {
+            }
+        })
     }
     override fun registerModel() = ProjectModel::class.java
 

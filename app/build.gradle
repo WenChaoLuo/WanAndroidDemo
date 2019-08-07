@@ -72,6 +72,7 @@ dependencies {
     implementation 'com.youth.banner:banner:1.4.10'
 
     implementation 'cn.yc:YCStateLib:1.1.9'
+    implementation "com.android.support:design:${android_support_version}"
     configurations.all {
         resolutionStrategy.eachDependency { DependencyResolveDetails details ->
             def requested = details.requested

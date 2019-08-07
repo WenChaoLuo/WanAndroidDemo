@@ -24,4 +24,7 @@ interface ConnectService{
 
     @GET("project/list/{page}/json")
     fun getProjects(@Path("page") page: String,@Query("cid") cid: String):Observable<BaseResponse<ProjectModel.DataModel>>
+
+    @GET("project/tree/json")
+    fun getProjectTree():Observable<BaseResponse<List<ProjectModel.TreeModel>>>
 }

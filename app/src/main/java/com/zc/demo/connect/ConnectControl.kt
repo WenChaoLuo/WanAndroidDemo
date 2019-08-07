@@ -1,5 +1,6 @@
 package com.zc.demo.connect
 
+import android.text.TextUtils
 import com.ihsanbal.logging.Level
 import com.ihsanbal.logging.LoggingInterceptor
 import com.zc.demo.BuildConfig
@@ -81,9 +82,13 @@ class ConnectControl{
             init()
             service.getHomeArticle(path).subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread()).subscribe(BaseObserver(callback))
         }
-        fun getProjects(path:String,callback: ConnectCallback<ProjectModel.DataModel>){
+        fun getProjects(path:String, cid:String, callback: ConnectCallback<ProjectModel.DataModel>){
             init()
-            service.getProjects(path,"294").subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread()).subscribe(BaseObserver(callback))
+            service.getProjects(path,cid).subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread()).subscribe(BaseObserver(callback))
+        }
+        fun getProjectTree(callback: ConnectCallback<List<ProjectModel.TreeModel>>){
+            init()
+            service.getProjectTree().subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread()).subscribe(BaseObserver(callback))
         }
     }
 

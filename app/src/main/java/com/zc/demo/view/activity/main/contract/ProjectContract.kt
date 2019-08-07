@@ -13,6 +13,7 @@ import mvp.ljb.kt.contract.IModelContract
 interface ProjectContract {
 
     interface IView : IViewContract{
+        fun refreshProjectTree(list: List<ProjectModel.TreeModel>)
         fun refreshProjects(list: List<ProjectModel.DataModel.DatasModel>)
         /**
          * 显示空数据界面
@@ -24,7 +25,10 @@ interface ProjectContract {
         fun showError(type:Int)
     }
 
-    interface IPresenter : IPresenterContract
+    interface IPresenter : IPresenterContract{
+        fun getProjectTree()
+        fun getProjects(cid:String)
+    }
 
     interface IModel : IModelContract
 }

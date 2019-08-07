@@ -53,8 +53,8 @@ class MainActivity : ViewPager.OnPageChangeListener, BaseMvpFragmentActivity<Mai
 
             }
         }
-        changeTabState()
         viewPager.currentItem = index - 1
+        changeTabState()
     }
 
 
