@@ -52,11 +52,12 @@ class ProjectFragment : TabLayout.OnTabSelectedListener,BaseQuickAdapter.OnItemC
         data = list
         dialog.dismiss()
         val adapter = this.context?.let { ProjectRvAdapter(R.layout.project_rv_layout,list, it) }
-        val managet = StaggeredGridLayoutManager(2,StaggeredGridLayoutManager.VERTICAL)
+        val managet = LinearLayoutManager(context)
+        managet.orientation = LinearLayoutManager.VERTICAL
         recyclerView.adapter = adapter
         recyclerView.layoutManager = managet
         adapter?.onItemChildClickListener = this
-        recyclerView.addItemDecoration(StaggeredDividerItemDecoration(context,ConvertUtils.dp2px(2f)))
+
     }
     override fun refreshProjectTree(list: List<ProjectModel.TreeModel>) {
         treeData = list
@@ -78,12 +79,16 @@ class ProjectFragment : TabLayout.OnTabSelectedListener,BaseQuickAdapter.OnItemC
         super.onCreate(savedInstanceState)
         dialog.show(context,null)
     }
+
+    override fun onStart() {
+        recyclerView.addItemDecoration(RecyclerItemDecoration(0,ConvertUtils.dp2px(6f)))
+        super.onStart()
+    }
     override fun registerPresenter() = ProjectPresenter::class.java
 
     override fun getLayoutId(): Int {
         return R.layout.project_fragment
     }
-
     override fun onTabReselected(tab: TabLayout.Tab?) {
     }
 

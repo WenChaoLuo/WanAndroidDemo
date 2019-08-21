@@ -14,7 +14,11 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
+        android:resizeableActivity="true"
         android:theme="@style/TranslucentTheme">
+        <meta-data
+            android:name="android.max_aspect"
+            android:value="2.2" />
         <activity android:name=".view.activity.main.view.act.ShowProjectActivity"></activity>
         <activity android:name=".Main4Activity" />
         <activity android:name=".MainActivity"></activity>

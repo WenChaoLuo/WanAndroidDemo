@@ -1,5 +1,6 @@
 package com.zc.demo.view.activity.main.contract
 
+import com.zc.demo.view.activity.main.model.SystemModel
 import mvp.ljb.kt.contract.IPresenterContract
 import mvp.ljb.kt.contract.IViewContract
 import mvp.ljb.kt.contract.IModelContract
@@ -11,7 +12,9 @@ import mvp.ljb.kt.contract.IModelContract
  **/
 interface SystemContract {
 
-    interface IView : IViewContract
+    interface IView : IViewContract{
+        fun refreshSystemData(data: List<SystemModel>)
+    }
 
     interface IPresenter : IPresenterContract
 

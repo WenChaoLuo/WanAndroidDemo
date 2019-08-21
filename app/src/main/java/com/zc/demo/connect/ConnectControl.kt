@@ -7,6 +7,7 @@ import com.zc.demo.BuildConfig
 import com.zc.demo.content.ServerUrl
 import com.zc.demo.view.activity.main.model.MainModel
 import com.zc.demo.view.activity.main.model.ProjectModel
+import com.zc.demo.view.activity.main.model.SystemModel
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
 import okhttp3.OkHttpClient
@@ -89,6 +90,10 @@ class ConnectControl{
         fun getProjectTree(callback: ConnectCallback<List<ProjectModel.TreeModel>>){
             init()
             service.getProjectTree().subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread()).subscribe(BaseObserver(callback))
+        }
+        fun getSystemData(callback: ConnectCallback<List<SystemModel>>){
+            init()
+            service.getSystemData().subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread()).subscribe(BaseObserver(callback))
         }
     }
 

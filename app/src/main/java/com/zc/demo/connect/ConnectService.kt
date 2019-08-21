@@ -3,6 +3,7 @@ package com.zc.demo.connect
 import com.zc.demo.model.BaseResponse
 import com.zc.demo.view.activity.main.model.MainModel
 import com.zc.demo.view.activity.main.model.ProjectModel
+import com.zc.demo.view.activity.main.model.SystemModel
 import io.reactivex.Observable
 import retrofit2.http.GET
 import retrofit2.http.Path
@@ -27,4 +28,7 @@ interface ConnectService{
 
     @GET("project/tree/json")
     fun getProjectTree():Observable<BaseResponse<List<ProjectModel.TreeModel>>>
+
+    @GET("tree/json")
+    fun getSystemData():Observable<BaseResponse<List<SystemModel>>>
 }

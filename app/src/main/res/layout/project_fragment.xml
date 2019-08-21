@@ -15,10 +15,12 @@
         app:tabSelectedTextColor="@color/white"
         app:tabPaddingBottom="@dimen/dp_2"
         android:layout_width="match_parent"
-        android:layout_height="36dp"/>
+        android:layout_height="40dp"/>
     <android.support.v7.widget.RecyclerView
         android:id="@+id/recyclerView"
         android:layout_marginTop="@dimen/dp_4"
+        android:layout_marginStart="@dimen/dp_4"
+        android:layout_marginEnd="@dimen/dp_4"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
 </LinearLayout>
